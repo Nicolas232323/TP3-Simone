@@ -5,14 +5,14 @@ const Input = ({ label = "label", type = "default", name = "default", classname 
         return (
             <>
                 <label> {label} </label>
-                <textarea name={name} classname={classname}></textarea>
+                <textarea name={name} className={classname}></textarea>
             </>
         )
     }
     return (
         <>
             <label> {label} </label>
-            <input type={type} name={name} classname={classname} value={value}></input>
+            <input type={type} name={name} className={classname} value={value}></input>
         </>
     )
 }

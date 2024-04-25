@@ -3,7 +3,7 @@ import './Button.css';
 const Button = ({text = "default", type = "default", classname = "default"}) => {
     return (
         <>
-            <button type={type} classname={classname}>{text}</button>
+            <button type={type} className={classname}>{text}</button>
         </>
     )
 }
