@@ -5,6 +5,8 @@ import Subtitulo from './components/Subtitulo/Subtitulo';
 import Input from './components/Input/Input';
 import Button from './components/Button/Button';
 import Cita from './components/Cita/Cita';
+import Listado from './components/Listado/Listado';
+import Formulario from './components/Formulario/Formulario';
 function App(props) {
 
   return (
