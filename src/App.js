@@ -7,8 +7,9 @@ import Button from './components/Button/Button';
 import Cita from './components/Cita/Cita';
 import Listado from './components/Listado/Listado';
 import Formulario from './components/Formulario/Formulario';
+import { useState } from 'react';
 function App(props) {
-
+  const [citas, setCitas] = useState([]);
   return (
     <>
       <Titulo texto="ADMINISTRADOR DE PACIENTES" />
