@@ -1,6 +1,6 @@
 import React from 'react';
 import './Input.css';
-const Input = ({ label = "label", type = "default", name = "default", classname = "default", placeholder = "default", value = "default" }) => {
+const Input = ({ label = "label", type = "default", name = "default", classname = "default", placeholder = "default" }) => {
     if (type === "textarea") {
         return (
             <>
@@ -12,7 +12,7 @@ const Input = ({ label = "label", type = "default", name = "default", classname 
     return (
         <>
             <label> {label} </label>
-            <input type={type} name={name} className={classname} value={value}></input>
+            <input type={type} name={name} className={classname} placeholder={placeholder}></input>
         </>
     )
 }

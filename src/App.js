@@ -17,8 +17,8 @@ function App(props) {
           </div>
           <div class="one-half column">
             <Subtitulo texto="ADMINISTRA TUS CITAS" />
-            <div class="info">
-                  {citas.map(c => <div class="cita"><Cita citas={citas} setCitas={setCitas} nombreMascota={c.mascota} nombreDuenio={c.duenio} fecha={c.fecha} hora={c.hora} sintomas={c.sintomas} id={c.id}></Cita></div>)}
+            <div class="lista-citas">
+                  {citas.map(c => <div classname="cita"><Cita citas={citas} setCitas={setCitas} nombreMascota={c.mascota} nombreDuenio={c.duenio} fecha={c.fecha} hora={c.hora} sintomas={c.sintomas} id={c.id}></Cita></div>)}
               </div>
           </div>
         </div>

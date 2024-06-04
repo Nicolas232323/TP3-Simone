@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './Formulario.css';
-import FormularioNuevo from '../FormularioNuevo/FormularioNuevo';
-export const Formulario = ({citas, setCitas, e}) => {
-    const crearCita = ({e}) => {
+import Input from '../Input/Input';
+export const Formulario = ({citas, setCitas}) => {
+    const crearCita = (e) => {
+      e.preventDefault();
         if (window.confirm("Estas seguro que quieres crear la cita?")) {
             setCitas([
               ...citas,
@@ -19,16 +20,14 @@ export const Formulario = ({citas, setCitas, e}) => {
           }
     }
       return(
-    <form class="" onSubmit={crearCita}>
-      <FormularioNuevo label="Nombre Mascota" tipo="text" nombre="mascota" class="u-full-width" placeholder="Nombre Mascota"></FormularioNuevo>
-      <FormularioNuevo label="Nombre Dueño" tipo="text" nombre="duenio" class="u-full-width" placeholder="Nombre dueño de la mascota"></FormularioNuevo>
-      <FormularioNuevo label="Fecha" tipo="date" nombre="fecha" class="u-full-width" placeholder=""></FormularioNuevo>
-      <FormularioNuevo label="Hora" tipo="time" nombre="hora" class="u-full-width" placeholder=""></FormularioNuevo>
-      <FormularioNuevo label="Síntomas" tipo="textarea" nombre="sintomas" class="u-full-width" placeholder=""></FormularioNuevo>
-      <button class="u-full-width button-primary">Agregar Cita</button>
+    <form classname="" onSubmit={crearCita}>
+      <Input label="Nombre Mascota" tipo="text" nombre="mascota" classname="u-full-width" placeholder="Nombre Mascota"></Input>
+      <Input label="Nombre Dueño" tipo="text" nombre="duenio" classname="u-full-width" placeholder="Nombre dueño de la mascota"></Input>
+      <Input label="Fecha" tipo="date" nombre="fecha" classname="u-full-width" placeholder="DD/MM/AAAA"></Input>
+      <Input label="Hora" tipo="time" nombre="hora" classname="u-full-width" placeholder="HH:MM"></Input>
+      <Input label="Síntomas" tipo="textarea" nombre="sintomas" classname="u-full-width" placeholder="Sintomas"></Input>
+      <button type='Submit' onClick={crearCita} classname="u-full-width button-primary">Agregar Cita</button>
     </form>
 )
 }
-
-
 export default Formulario;
