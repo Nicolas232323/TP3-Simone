@@ -1,7 +1,12 @@
 import React  from "react";
-import Button from "../Button/Button";
 import './Cita.css';
-const Cita = ({nombreMascota, nombreDueño, Fecha, Hora, Sintomas }) => {
+import { useState } from "react";
+const Cita = ({nombreMascota, nombreDueño, Fecha, Hora, Sintomas, setCitas, citas, id }) => {
+    const eliminar = () => {
+        if (window.confirm("Estas seguro que quieres eliminar esta cita?")){
+            setCitas(citas.filter(c => c.id !== id))
+        }
+}
     return(
         <>
             <div className="cita"> 
@@ -10,7 +15,7 @@ const Cita = ({nombreMascota, nombreDueño, Fecha, Hora, Sintomas }) => {
                 <p>Fecha: <span>{Fecha}</span></p>
                 <p>Hora: <span>{Hora}</span></p>
                 <p>Sintomas: <span>{Sintomas}</span></p>
-                <Button text="ELIMINAR X" type="submit" classname="button elimnar u-full-width"/>
+                <button onClick={eliminar} class="button elimnar u-full-width" >Eliminar ×</button>
             </div>
         </>
     )
