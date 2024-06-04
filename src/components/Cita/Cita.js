@@ -2,7 +2,7 @@ import React  from "react";
 import './Cita.css';
 import Button from "../Button/Button";
 import { useState } from "react";
-const Cita = ({nombreMascota, nombreDueño, Fecha, Hora, Sintomas, setCitas, citas, id }) => {
+const Cita = ({nombreMascota, nombreDueño , Fecha , Hora , Sintomas , setCitas , citas , id }) => {
     const eliminar = () => {
         if (window.confirm("Estas seguro que quieres eliminar esta cita?")){
             setCitas(citas.filter(c => c.id !== id))

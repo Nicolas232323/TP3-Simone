@@ -9,16 +9,16 @@ function App(props) {
   return (
     <>
       <Titulo texto="ADMINISTRADOR DE PACIENTES" />
-      <div class="container">
-        <div class="row">
-          <div class="one-half column">
+      <div className="container">
+        <div className="row">
+          <div className="one-half column">
             <Subtitulo texto="CREAR MI CITA" />
             <Formulario citas={citas} setCitas={setCitas}></Formulario>
           </div>
-          <div class="one-half column">
+          <div className="one-half column">
             <Subtitulo texto="ADMINISTRA TUS CITAS" />
-            <div class="lista-citas">
-                  {citas.map(c => <div classname="cita"><Cita citas={citas} setCitas={setCitas} nombreMascota={c.mascota} nombreDueño={c.duenio} Fecha={c.fecha} Hora={c.hora} Sintomas={c.sintomas} id={c.id}></Cita></div>)}
+            <div className="lista-cita">
+                  {citas.map(c => <div className="cita"><Cita citas={citas} setCitas={setCitas} nombreMascota={c.mascota} nombreDueño={c.duenio} Fecha={c.fecha} Hora={c.hora} Sintomas={c.sintomas} id={c.id}></Cita></div>)}
               </div>
           </div>
         </div>
@@ -26,5 +26,4 @@ function App(props) {
     </>
   )
 }
-
 export default App;
