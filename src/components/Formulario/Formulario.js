@@ -1,12 +1,13 @@
 
 import React from 'react';
-import { useState } from 'react';
+//import { useState } from 'react';
 import './Formulario.css';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 const Formulario = ({citas, setCitas}) => {
     const crearCita = (e) => {
       e.preventDefault();
+      console.log(e.target.mascota.value)
         if (window.confirm("Estas seguro que quieres crear la cita?")) {
             setCitas([
               ...citas,
@@ -19,6 +20,7 @@ const Formulario = ({citas, setCitas}) => {
                 Sintomas: e.target.sintomas.value,
               },
             ]);
+            console.log(citas)
             
           }
     }
