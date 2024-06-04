@@ -1,18 +1,18 @@
 import React from 'react';
 import './Input.css';
-const Input = ({ label = "label", type = "default", name = "default", classname = "default", placeholder = "default" }) => {
-    if (type === "textarea") {
+const Input = ({ label = "label", tipo = "default", nombre = "default", classname = "default", placeholder = "default" }) => {
+    if (tipo === "textarea") {
         return (
             <>
                 <label> {label} </label>
-                <textarea name={name} className={classname}></textarea>
+                <textarea name={nombre} className={classname}></textarea>
             </>
         )
     }
     return (
         <>
             <label> {label} </label>
-            <input type={type} name={name} className={classname} placeholder={placeholder}></input>
+            <input type={tipo} name={nombre} className={classname} placeholder={placeholder}></input>
         </>
     )
 }

@@ -1,5 +1,6 @@
 import React  from "react";
 import './Cita.css';
+import Button from "../Button/Button";
 import { useState } from "react";
 const Cita = ({nombreMascota, nombreDueño, Fecha, Hora, Sintomas, setCitas, citas, id }) => {
     const eliminar = () => {
@@ -15,8 +16,8 @@ const Cita = ({nombreMascota, nombreDueño, Fecha, Hora, Sintomas, setCitas, cit
                 <p>Fecha: <span>{Fecha}</span></p>
                 <p>Hora: <span>{Hora}</span></p>
                 <p>Sintomas: <span>{Sintomas}</span></p>
-                <button onClick={eliminar} class="button elimnar u-full-width" >Eliminar ×</button>
-            </div>
+                <Button type = "null" text = "Eliminar ×" clase = "button-elimnar u-full-width" EliminarCita = {eliminar} />             
+                </div>
         </>
     )
 }

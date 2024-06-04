@@ -1,7 +1,10 @@
+
+import React from 'react';
 import { useState } from 'react';
 import './Formulario.css';
 import Input from '../Input/Input';
-export const Formulario = ({citas, setCitas}) => {
+import Button from '../Button/Button';
+const Formulario = ({citas, setCitas}) => {
     const crearCita = (e) => {
       e.preventDefault();
         if (window.confirm("Estas seguro que quieres crear la cita?")) {
@@ -9,11 +12,11 @@ export const Formulario = ({citas, setCitas}) => {
               ...citas,
               {
                 id: Date.now(),
-                mascota: e.target.mascota.value,
-                duenio: e.target.duenio.value,
-                fecha: e.target.fecha.value,
-                hora: e.target.hora.value,
-                sintomas: e.target.sintomas.value,
+                nombreMascota: e.target.mascota.value,
+                nombreDueño: e.target.duenio.value,
+                Fecha: e.target.fecha.value,
+                Hora: e.target.hora.value,
+                Sintomas: e.target.sintomas.value,
               },
             ]);
             
@@ -26,7 +29,7 @@ export const Formulario = ({citas, setCitas}) => {
       <Input label="Fecha" tipo="date" nombre="fecha" classname="u-full-width" placeholder="DD/MM/AAAA"></Input>
       <Input label="Hora" tipo="time" nombre="hora" classname="u-full-width" placeholder="HH:MM"></Input>
       <Input label="Síntomas" tipo="textarea" nombre="sintomas" classname="u-full-width" placeholder="Sintomas"></Input>
-      <button type='Submit' onClick={crearCita} classname="u-full-width button-primary">Agregar Cita</button>
+      <Button text="Agregar Cita" type="Submit" clase="button-primary"> </Button>
     </form>
 )
 }
